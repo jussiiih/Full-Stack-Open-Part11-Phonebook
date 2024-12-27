@@ -19,7 +19,7 @@ jobs:
       - name: Install depedebcies
         run: npm install
       - name: Check style
-        run: npm run eslint
+        run: npm run lint
 
   tag_release:
     if: ${{ !contains(toJson(github.event.commits.*.message), '#skip') }}
