@@ -6,7 +6,6 @@ const url = process.env.MONGODB_URI
 
 console.log('connecting to', url)
 mongoose.connect(url)
-// eslint-disable-next-line no-unused-vars
   .then(result => {
     console.log('connencted to MongoDB')
   })
@@ -15,7 +14,6 @@ mongoose.connect(url)
   })
 
 
-  
 function begins_two_or_three_numbers_and_dash (val) {
   return (/^[0-9]{2,3}-/).test(val)
 }

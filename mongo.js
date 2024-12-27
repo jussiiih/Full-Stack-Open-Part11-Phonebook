@@ -51,8 +51,6 @@ else if (process.argv.length === 5) {
     name: newName,
     number: newNumber
   })
-
-  // eslint-disable-next-line no-unused-vars
   person.save().then(result => {
     console.log(`Added ${newName} number ${newNumber} to phonebook`)
     mongoose.connection.close()
