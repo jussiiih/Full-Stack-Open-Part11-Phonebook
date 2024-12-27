@@ -20,7 +20,7 @@ jobs:
         run: npm install
       - name: Check style
         run: npm run lint
-            - name: Build
+      - name: Build
         id: build
         run: npm run build:ui
       - name: Trigger deployment
