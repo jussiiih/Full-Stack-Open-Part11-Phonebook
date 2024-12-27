@@ -16,7 +16,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install depedebcies
+      - name: Install dependencies (root)
+        run: npm install
+      - name: Install dependencies (client)
+        working-directory: client
         run: npm install
       - name: Check style
         run: npm run lint
