@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "cd client && npm run build && cp -r client/dist/* dist",
+    "build:ui": "cd client && npm run build && cp -r dist/* ../dist",
     "deploy": "npm run build:ui && node index.js",
     "lint": "eslint ."
   },
