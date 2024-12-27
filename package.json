@@ -7,7 +7,7 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "del /S /Q ..\\Full-Stack-Open-Part3\\dist && cd ..\\Full-Stack-Open\\osa2\\puhelinluettelo && npm run build && xcopy /S /Y dist ..\\..\\..\\Full-Stack-Open-Part3\\dist",
+    "build:ui": "del /S /Q dist && cd client && npm run build && xcopy /S /Y dist\\* ..\\dist\\",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
     "lint": "eslint ."
   },

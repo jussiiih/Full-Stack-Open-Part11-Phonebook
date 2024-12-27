@@ -13,11 +13,9 @@ module.exports = [
     plugins: {
       '@stylistic/js': plugin
     },
-    ignores: ['dist/**', 'eslint.config.js'],
+    ignores: ['dist/**', 'client/dist/**', 'eslint.config.js'],
 
     rules: {
-      '@stylistic/js/indent': ['error', 2],
-      '@stylistic/js/linebreak-style': ['error', 'unix'],
       '@stylistic/js/quotes': ['error', 'single'],
       '@stylistic/js/semi': ['error', 'never'],
       'eqeqeq': 'error',
