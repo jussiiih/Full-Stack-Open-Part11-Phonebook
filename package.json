@@ -1,0 +1,54 @@
+{
+  "name": "phonebook",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && node index.js",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "dev": "npm run dev:client && npm run dev:server",
+    "build": "vite build",
+    "build:ui": "del /S /Q ..\\Full-Stack-Open-Part3\\dist && cd ..\\Full-Stack-Open\\osa2\\puhelinluettelo && npm run build && xcopy /S /Y dist ..\\..\\..\\Full-Stack-Open-Part3\\dist",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "json-server -p3002 --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jussiiih/Full-Stack-Open-Part11-Phonebook.git"
+  },
+  "author": "Juha-Pekka Heino",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.4",
+    "morgan": "^1.10.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin-js": "^2.1.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "globals": "^15.2.0",
+    "json-server": "^1.0.0-alpha.23",
+    "nodemon": "^3.1.0",
+    "vite": "^5.2.0"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "bugs": {
+    "url": "https://github.com/jussiiih/Full-Stack-Open-Part11-Phonebook/issues"
+  },
+  "homepage": "https://github.com/jussiiih/Full-Stack-Open-Part11-Phonebook#readme"
+}
