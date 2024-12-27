@@ -7,8 +7,8 @@
     "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:ui": "del /S /Q dist && cd client && npm run build && xcopy /S /Y dist\\* ..\\dist\\",
-    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push",
+    "build:ui": "cd client && npm run build && xcopy /S /Y client\\dist\\* dist",
+    "deploy": "npm run build:ui && node index.js",
     "lint": "eslint ."
   },
   "repository": {
