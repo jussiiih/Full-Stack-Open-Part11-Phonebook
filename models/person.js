@@ -7,7 +7,7 @@ const url = process.env.MONGODB_URI
 console.log('connecting to MongoDB URL')
 mongoose.connect(url)
   .then(result => {
-    console.log('connencted to MongoDB')
+    console.log('connected to MongoDB')
   })
   .catch((error) => {
     console.log('error connecting to MongoDB', error.message)

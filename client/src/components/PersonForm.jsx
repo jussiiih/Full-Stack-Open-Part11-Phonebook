@@ -8,6 +8,9 @@ const PersonForm = (props) =>{
             Number: <input value={props.newNumber} onChange={props.handleNumberChange}/>
         </div>
         <div>
+            <i>Number must be in the format 09-12345... or 040-1234...</i>
+        </div>
+        <div>
             <button type="submit">Add</button> 
         </div>
         

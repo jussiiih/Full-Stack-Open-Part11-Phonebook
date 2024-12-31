@@ -8,16 +8,30 @@ const PersonsList = (props) => {
   }  
   
   return (
-    <ul style ={{listStyleType: 'none', padding: 0 }}>
-        {props.personsToShow.map(person =>
-        <li key={person.name}>{person.name} {person.number}
-          <button onClick={() => handleDeleteClick(person) }>
-            Delete
-          </button>
-        </li>
-        )}
-    </ul>
-    )
+    <table>
+      <tr>
+        <th style={{ textAlign: 'left' }}>Name</th>
+        <th style={{ textAlign: 'left' }}>Phone number</th>
+        <th style={{ textAlign: 'left' }}></th>
+      </tr>
+
+      {props.personsToShow.map(person => {
+        return (
+      <tr key={person.name}>
+        <td>
+          {person.name}
+        </td>
+        <td>
+          {person.number}
+        </td>
+        <td>
+          <button onClick={() => handleDeleteClick(person) }>Delete</button>
+        </td>
+      </tr>)
+      })}
+      </table>
+      
+      )
 }
 
 export default PersonsList

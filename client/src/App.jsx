@@ -36,7 +36,7 @@ const App = () => {
         if (existingPerson) {
             if ((/^[0-9]{2,3}-/).test(newNumber) === false || /^([^-]*-){1}[^-]*$/.test(newNumber) === false || (/-[0-9]*$/).test(newNumber) === false || newNumber.length < 8)
               {
-                setErrorMessage(' The number shouls have a form of two or three numbers, a dash and more numbers so that it is at least 8 characters long.')
+                setErrorMessage(' The number should have a form of two or three numbers, a dash and more numbers so that it is at least 8 characters long.')
                 setTimeout(() => {
                   setErrorMessage(null)
                 }, 5000)
